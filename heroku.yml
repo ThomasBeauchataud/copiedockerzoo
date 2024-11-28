@@ -1,0 +1,5 @@
+build:
+  docker:
+    web: dockerfile
+run:
+  web: apache2-foreground
