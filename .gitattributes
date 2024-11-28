@@ -1,0 +1,12 @@
+# Assure un format LF sur tous les fichiers texte
+* text=auto
+
+# Scripts exécutables
+*.sh text eol=lf
+*.php text eol=lf
+*.js text eol=lf
+*.yaml text eol=lf
+
+# Binaires
+*.lock binary
+*.turtle binary

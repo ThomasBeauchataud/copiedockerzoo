@@ -1,0 +1,14 @@
+db.horaires.insertMany([ { "jour": "lundi", "ouverture": "09:00", "fermeture": "18:00", "ferme": false }, { "jour": "mardi", "ouverture": "09:00", "fermeture": "18:00", "ferme": false }, { "jour": "mercredi", "ouverture": "09:00", "fermeture": "18:00", "ferme": false }, { "jour": "jeudi", "ouverture": "09:00", "fermeture": "18:00", "ferme": false }, { "jour": "vendredi", "ouverture": "09:00", "fermeture": "18:00", "ferme": false }, { "jour": "samedi", "ouverture": "10:00", "fermeture": "17:00", "ferme": false }, { "jour": "dimanche", "ouverture": "10:00", "fermeture": "17:00", "ferme": false }] );
+use avis_clients
+]);
+  { "jour": "dimanche", "ouverture": "10:00", "fermeture": "17:00", "ferme": false }
+  { "jour": "samedi", "ouverture": "10:00", "fermeture": "17:00", "ferme": false },
+  { "jour": "vendredi", "ouverture": "09:00", "fermeture": "18:00", "ferme": false },
+  { "jour": "jeudi", "ouverture": "09:00", "fermeture": "18:00", "ferme": false },
+  { "jour": "mercredi", "ouverture": "09:00", "fermeture": "18:00", "ferme": false },
+  { "jour": "mardi", "ouverture": "09:00", "fermeture": "18:00", "ferme": false },
+  { "jour": "lundi", "ouverture": "09:00", "fermeture": "18:00", "ferme": false },
+db.horaires.insertMany([
+use admin
+db.getUsers();
+use admin
