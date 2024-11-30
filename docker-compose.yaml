@@ -12,18 +12,20 @@ services:
     volumes:
       - mysqldata:/var/lib/mysql
     restart: always
-  php:
-    container_name: php
+  app:
+    container_name: app
     build:
       context: ./app
+      dockerfile: dev.Dockerfile
     ports:
       - 8080:80
       - 8443:443
     volumes:
-      - ./apache/default.conf:/etc/apache2/sites-enabled/000-default.conf
-      - ./apache/default-ssl.conf:/etc/apache2/sites-enabled/000-default-ssl.conf
       - ./etc/ssl:/etc/ssl
-      - ./app:/app
+      - ./app/:/app/
+      - /app/vendor
+      - /app/var/cache
+      - /app/public/bundles
     restart: always
     depends_on:
       - database

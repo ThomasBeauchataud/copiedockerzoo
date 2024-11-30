@@ -33,7 +33,9 @@ RUN chmod 777 -R /app/
 
 #Installation of the project
 WORKDIR /app
-USER nobody
+RUN apk add php83-simplexml
+RUN composer update
+#USER nobody
 RUN composer install --no-dev --optimize-autoloader --no-scripts
 RUN php bin/console cache:clear --env=prod
 RUN composer dump-env prod
