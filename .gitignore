@@ -1,7 +1,7 @@
 
 # Symfony : caches, logs, vendor
-/app/var/
-/app/vendor/
+# /app/var/
+# /app/vendor/
 
 # Fichiers et dossiers liés à MySQL
 # mysql/
