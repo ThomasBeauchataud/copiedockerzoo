@@ -10,12 +10,12 @@ services:
     ports:
       - '4306:3306'
     volumes:
-      - ./mysql:/var/lib/mysql
+      - mysqldata:/var/lib/mysql
     restart: always
   php:
     container_name: php
     build:
-      context: ./php
+      context: ./app
     ports:
       - 8080:80
       - 8443:443
@@ -23,7 +23,7 @@ services:
       - ./apache/default.conf:/etc/apache2/sites-enabled/000-default.conf
       - ./apache/default-ssl.conf:/etc/apache2/sites-enabled/000-default-ssl.conf
       - ./etc/ssl:/etc/ssl
-      - ./app:/var/www
+      - ./app:/app
     restart: always
     depends_on:
       - database
@@ -66,3 +66,6 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: example
       ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
       ME_CONFIG_BASICAUTH: false
+
+volumes:
+  mysqldata:
